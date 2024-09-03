@@ -1,0 +1,12 @@
+
+  {
+    "/external_api": {
+      "target": "https://vc.tecsi.hmn.scu.sld.cu",
+      "secure": false,
+      "changeOrigin": true,
+      "logLevel": "debug",
+      "pathRewrite": {"^/external_api" : ""}
+    }
+  }
+  
+  

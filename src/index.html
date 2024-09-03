@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Vc</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <meta http-equiv="Content-Type" content="text/html">
+</head>
+<body>
+  <!--div id="jitsi-container"></div-->
+  <app-root></app-root>
+
+  <!--script src="http://vc.tecsi.hmn.scu.sld.cu/external_api.js"></script-->
+  <!-- Incluye el script de Jitsi Meet aquí -->
+  <!--script src="https://meet.jit.si/external_api.js"></script-->
+  <!--script src="https://meet.jit.si/external_api.js"></script>
+
+ 
+  
+  
+
+  <script>
+ 
+
+
+    window.addEventListener('DOMContentLoaded', (event) => {
+         
+      const domain = "meet.jit.si";
+     // const domain = `https://${environment.urlHost}`;
+      const options = {
+        devices:{
+           audioInput:'',
+           audioOuput:'',
+           videoInput:''
+        },
+       // roomName: "roomName",
+        height: 400,
+        parentNode: document.getElementById("jitsi-container"),
+        interfaceConfigOverwrite: {
+          filmStripOnly: false,
+          SHOW_JITSI_WATERMARK: false,
+        },
+        configOverwrite: {
+          disableSimulcast: false,
+        },
+      }; 
+
+      const api = new JitsiMeetExternalAPI(domain, options);
+      api.addEventListener("videoConferenceJoined", () => {
+        console.log("Local User Joined");
+        // Initialize Jitsi Meet here
+      });
+    });
+  </script-->
+
+</body>
+</html>
